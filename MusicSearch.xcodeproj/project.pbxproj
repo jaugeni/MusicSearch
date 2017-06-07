@@ -12,6 +12,10 @@
 		939FF4401EE7A26A00B5A8C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939FF43E1EE7A26A00B5A8C8 /* Main.storyboard */; };
 		939FF4421EE7A26B00B5A8C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 939FF4411EE7A26B00B5A8C8 /* Assets.xcassets */; };
 		939FF4451EE7A26B00B5A8C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 939FF4431EE7A26B00B5A8C8 /* LaunchScreen.storyboard */; };
+		939FF44D1EE7A30300B5A8C8 /* ItunseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939FF44C1EE7A30300B5A8C8 /* ItunseConnection.swift */; };
+		939FF44F1EE7AE9000B5A8C8 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939FF44E1EE7AE9000B5A8C8 /* Album.swift */; };
+		939FF4531EE820F700B5A8C8 /* MusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 939FF4521EE820F700B5A8C8 /* MusicView.xib */; };
+		939FF4551EE8214E00B5A8C8 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939FF4541EE8214E00B5A8C8 /* MusicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		939FF4411EE7A26B00B5A8C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		939FF4441EE7A26B00B5A8C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		939FF4461EE7A26B00B5A8C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		939FF44C1EE7A30300B5A8C8 /* ItunseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunseConnection.swift; sourceTree = "<group>"; };
+		939FF44E1EE7AE9000B5A8C8 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		939FF4521EE820F700B5A8C8 /* MusicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicView.xib; sourceTree = "<group>"; };
+		939FF4541EE8214E00B5A8C8 /* MusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +64,32 @@
 			children = (
 				939FF43A1EE7A26A00B5A8C8 /* AppDelegate.swift */,
 				939FF43C1EE7A26A00B5A8C8 /* ViewController.swift */,
+				939FF4561EE821AC00B5A8C8 /* View */,
+				939FF4511EE7AEA900B5A8C8 /* Model */,
+				939FF44C1EE7A30300B5A8C8 /* ItunseConnection.swift */,
 				939FF43E1EE7A26A00B5A8C8 /* Main.storyboard */,
 				939FF4411EE7A26B00B5A8C8 /* Assets.xcassets */,
 				939FF4431EE7A26B00B5A8C8 /* LaunchScreen.storyboard */,
 				939FF4461EE7A26B00B5A8C8 /* Info.plist */,
 			);
 			path = MusicSearch;
+			sourceTree = "<group>";
+		};
+		939FF4511EE7AEA900B5A8C8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				939FF44E1EE7AE9000B5A8C8 /* Album.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		939FF4561EE821AC00B5A8C8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				939FF4541EE8214E00B5A8C8 /* MusicView.swift */,
+				939FF4521EE820F700B5A8C8 /* MusicView.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +154,7 @@
 			files = (
 				939FF4451EE7A26B00B5A8C8 /* LaunchScreen.storyboard in Resources */,
 				939FF4421EE7A26B00B5A8C8 /* Assets.xcassets in Resources */,
+				939FF4531EE820F700B5A8C8 /* MusicView.xib in Resources */,
 				939FF4401EE7A26A00B5A8C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				939FF44D1EE7A30300B5A8C8 /* ItunseConnection.swift in Sources */,
 				939FF43D1EE7A26A00B5A8C8 /* ViewController.swift in Sources */,
+				939FF4551EE8214E00B5A8C8 /* MusicView.swift in Sources */,
 				939FF43B1EE7A26A00B5A8C8 /* AppDelegate.swift in Sources */,
+				939FF44F1EE7AE9000B5A8C8 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

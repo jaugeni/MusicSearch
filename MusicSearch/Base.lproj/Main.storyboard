@@ -1,26 +1,97 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdF-tF-r3Y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                <color key="backgroundColor" red="0.19474881890000001" green="0.67601591350000001" blue="0.85135310890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="Rdx-C0-eH9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lus-Dl-07K">
+                                <rect key="frame" x="52" y="122" width="310" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRP-eR-Uhr">
+                                <rect key="frame" x="163.66666666666666" y="168" width="86" height="30"/>
+                                <state key="normal" title="Stast search"/>
+                                <connections>
+                                    <action selector="searchForMusicPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9yo-JB-EQh"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYF-pS-zFW">
+                                <rect key="frame" x="0.0" y="449" width="414" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="e07-CC-XoJ"/>
+                                </constraints>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="VfK-jR-z8W">
+                                <rect key="frame" x="0.0" y="699" width="414" height="37"/>
+                                <color key="pageIndicatorTintColor" red="0.19474881890000001" green="0.67601591350000001" blue="0.85135310890000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="currentPageIndicatorTintColor" red="0.93440347909999999" green="0.40369927880000001" blue="0.40875646469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGe-MH-zyQ">
+                                <rect key="frame" x="150" y="412" width="114" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VfK-jR-z8W" secondAttribute="bottom" id="33e-TI-gat"/>
+                            <constraint firstItem="HYF-pS-zFW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="52Q-vf-5OO"/>
+                            <constraint firstAttribute="trailing" secondItem="HYF-pS-zFW" secondAttribute="trailing" id="BoA-qp-W8N"/>
+                            <constraint firstItem="HYF-pS-zFW" firstAttribute="top" secondItem="wGe-MH-zyQ" secondAttribute="bottom" constant="16" id="DJV-Hc-wZH"/>
+                            <constraint firstItem="hRP-eR-Uhr" firstAttribute="top" secondItem="Lus-Dl-07K" secondAttribute="bottom" constant="16" id="SRK-p8-UGP"/>
+                            <constraint firstItem="Lus-Dl-07K" firstAttribute="top" secondItem="gdF-tF-r3Y" secondAttribute="bottom" constant="42" id="TuA-Nm-4mJ"/>
+                            <constraint firstItem="wGe-MH-zyQ" firstAttribute="centerX" secondItem="HYF-pS-zFW" secondAttribute="centerX" id="TvF-GP-Orc"/>
+                            <constraint firstItem="gdF-tF-r3Y" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="YYe-zb-1b5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lus-Dl-07K" secondAttribute="trailing" constant="32" id="cJL-dy-Srq"/>
+                            <constraint firstAttribute="trailing" secondItem="gdF-tF-r3Y" secondAttribute="trailing" id="dEK-FU-ACR"/>
+                            <constraint firstItem="gdF-tF-r3Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eV6-ch-IvM"/>
+                            <constraint firstAttribute="trailing" secondItem="VfK-jR-z8W" secondAttribute="trailing" id="gT8-f9-5Vd"/>
+                            <constraint firstItem="VfK-jR-z8W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gYf-84-QZo"/>
+                            <constraint firstItem="hRP-eR-Uhr" firstAttribute="centerX" secondItem="Lus-Dl-07K" secondAttribute="centerX" id="gyW-DU-6Be"/>
+                            <constraint firstItem="Lus-Dl-07K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="ruQ-Br-iq8"/>
+                            <constraint firstItem="VfK-jR-z8W" firstAttribute="top" secondItem="HYF-pS-zFW" secondAttribute="bottom" id="wAg-7r-qPT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pageIndicator" destination="VfK-jR-z8W" id="x9k-rD-JPJ"/>
+                        <outlet property="scrolView" destination="HYF-pS-zFW" id="KR4-yh-Rag"/>
+                        <outlet property="searchTxt" destination="Lus-Dl-07K" id="IwV-Ou-lek"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
